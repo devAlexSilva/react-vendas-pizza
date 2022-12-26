@@ -1,11 +1,11 @@
 import * as S from './style'
 
-export const Navbar = () => {
+export const Navbar = ({ toggle }) => {
     return (
         <>
          <S.Nav>
             <S.NavLink to='/'>Pizza</S.NavLink>
-            <S.NavIcon>
+            <S.NavIcon onClick={toggle}>
                 <p>Menu</p>
                 <S.Bars />
             </S.NavIcon>
