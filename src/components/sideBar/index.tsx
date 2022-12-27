@@ -1,8 +1,13 @@
 import * as S from './style'
 
-export const SideBar = ({ isOpen, toggle }) => {
+type props = {
+    isOpen: boolean, 
+    toggle: () => void
+}
+
+export const SideBar = ({ isOpen, toggle }: props) => {
     return (
-        <S.SidebarContainer isOpen={isOpen}>
+        <S.SidebarContainer property={`${isOpen}`}>
             <S.Icon>
                 <S.CloseIcon onClick={toggle}/>
             </S.Icon>
