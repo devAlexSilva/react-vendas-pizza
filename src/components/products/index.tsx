@@ -1,10 +1,10 @@
 import * as S from './style'
 import { productData as data } from './data'
 
-export const Product = () => {
+export const Product = ({ heading }: {heading: string}) => {
     return (
         <S.ProductsContainer>
-            <S.ProductsHeading>heading</S.ProductsHeading>
+            <S.ProductsHeading>{heading}</S.ProductsHeading>
             <S.ProductWrapper>
                 {
                     data.map(product => {
@@ -15,8 +15,8 @@ export const Product = () => {
                                     <S.ProductTitle>{product.title}</S.ProductTitle>
                                     <S.ProductDesc>{product.desc}</S.ProductDesc>
                                     <S.ProductPrice>{product.price}</S.ProductPrice>
-                                    <S.ProductButton>{product.button}</S.ProductButton>
                                 </S.ProductInfo>
+                                    <S.ProductButton>{product.button}</S.ProductButton>
                             </S.ProductCard>
                         )
                     })

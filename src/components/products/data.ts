@@ -7,7 +7,7 @@ export const productData = [
         title: 'Pizza deliciosa',
         img: product1,
         alt: 'Pizza deliciosa',
-        desc: 'A melhor pizza que você verá hoje',
+        desc: 'A melhor pizza que você já viu e verá, pode confiar!',
         price: '$25,00',
         button: 'Adicionar ao Carrinho'
     },
@@ -15,7 +15,7 @@ export const productData = [
         title: 'Pizza Maravilhosa',
         img: product2,
         alt: 'Pizza Maravilhosa',
-        desc: 'Essa pizza é uma iguária jamais vista antes',
+        desc: 'Essa pizza é uma iguaria jamais vista antes',
         price: '$75,25',
         button: 'Adicionar ao Carrinho'
     },

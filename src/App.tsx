@@ -9,7 +9,8 @@ export const App = () => {
       <Router>
         <GlobalStyle />
         <Hero />
-        <Product />
+        <Product heading="Pizzas Doces" />
+        <Product heading="Pizzas Salgadas" />
       </Router>
     </>
   )
