@@ -13,7 +13,7 @@ export const SidebarContainer = styled.aside`
     align-items: center;
     top: 0;
     transition: .3s ease-in-out;
-    right: ${ ({property}) => property == 'false' ? '0' : '-1000px' };
+    right: ${ ({property}) => property == 'false' ? '-1000px' : '0' };
 
     @media screen and (max-width: 400px){
         width: 100%;
