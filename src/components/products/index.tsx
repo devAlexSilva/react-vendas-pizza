@@ -1,14 +1,25 @@
 import * as S from './style'
-import { productData as data } from './data'
 
-export const Product = ({ heading }: {heading: string}) => {
+type props = {
+    heading: string,
+    dataProduct: {
+        id: number,
+        title: string,
+        img: string,
+        alt: string,
+        desc: string,
+        price: string,
+        button: string
+    }[]
+}
+export const Product = ({ heading, dataProduct }: props) => {
     return (
         <S.ProductsContainer>
             <S.ProductsHeading>{heading}</S.ProductsHeading>
             <S.ProductWrapper>
                 {
-                    data.map(product => {
-                        return(
+                    dataProduct.map(product => {
+                        return (
                             <S.ProductCard key={product.id}>
                                 <S.ProductImg src={product.img} alt={product.alt} />
                                 <S.ProductInfo>
@@ -16,7 +27,7 @@ export const Product = ({ heading }: {heading: string}) => {
                                     <S.ProductDesc>{product.desc}</S.ProductDesc>
                                     <S.ProductPrice>{product.price}</S.ProductPrice>
                                 </S.ProductInfo>
-                                    <S.ProductButton>{product.button}</S.ProductButton>
+                                <S.ProductButton>{product.button}</S.ProductButton>
                             </S.ProductCard>
                         )
                     })
